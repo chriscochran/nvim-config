@@ -29,6 +29,7 @@ require('lazy').setup({
     require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
     require 'cc.plugins.lsp',
+    require 'cc.plugins.lazygit',
     require 'cc.plugins.mini', -- might not need (will use lauline)
     require 'cc.plugins.neo-tree', -- toggle
     require 'cc.plugins.noice', -- dont see the displays

@@ -8,6 +8,7 @@ return {
             local harpoon = require 'harpoon'
             harpoon:setup()
 
+            -- Add and Menu
             vim.keymap.set('n', '<leader>ha', function()
                 harpoon:list():add()
             end, { desc = '[H]arpoon toggle [a]dd file' })
@@ -16,6 +17,7 @@ return {
                 harpoon.ui:toggle_quick_menu(harpoon:list())
             end, { desc = '[H]arpoon toggle quick menu' })
 
+            -- Selecting
             vim.keymap.set('n', '<leader>hh', function()
                 harpoon:list():select(1)
             end, { desc = '[H]arpoon select 1' })

@@ -26,7 +26,7 @@ require('lazy').setup({
     require 'cc.plugins.autopairs',
     require 'cc.plugins.completion',
     require 'cc.plugins.format',
-    require 'cc.plugins.gitsigns', -- (no hunk)
+    require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
     require 'cc.plugins.lsp',
     require 'cc.plugins.mini', -- might not need (will use lauline)

@@ -23,6 +23,7 @@ require('lazy').setup({
     -- Theme first, always
     { 'f4z3r/gruvbox-material.nvim', name = 'gruvbox-material', lazy = false, priority = 1000, opts = {} },
 
+    require 'cc.plugins.alpha',
     require 'cc.plugins.autopairs',
     require 'cc.plugins.completion',
     require 'cc.plugins.format',

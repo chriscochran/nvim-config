@@ -46,12 +46,13 @@ return {
 
             -- Document existing key chains
             spec = {
+                { '<leader>h', group = '[H]arpoon' },
+                { '<leader>n', group = '[N]eotree' },
                 { '<leader>s', group = '[S]earch' },
                 { '<leader>t', group = '[T]oggle' },
-                { '<leader>h', group = '[H]arpoon' },
-                -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+                { '<leader>x', group = 'Trouble' },
                 { '<leader>z', group = '[Z]en Mode' },
-                { '<leader>n', group = '[N]eotree' },
+                -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
             },
         },
     },

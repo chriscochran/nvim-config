@@ -28,14 +28,16 @@ require('lazy').setup({
     require 'cc.plugins.format',
     require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
-    require 'cc.plugins.lsp',
     require 'cc.plugins.lazygit',
-    require 'cc.plugins.mini', -- might not need (will use lauline)
-    require 'cc.plugins.neo-tree', -- toggle
+    require 'cc.plugins.lsp', -- ...
+    require 'cc.plugins.lualine',
+    -- require 'cc.plugins.mini', -- go thru keymaps and features
+    require 'cc.plugins.neo-tree',
     require 'cc.plugins.noice', -- dont see the displays
     require 'cc.plugins.telescope',
     require 'cc.plugins.todo',
     require 'cc.plugins.treesitter',
+    require 'cc.plugins.trouble',
     require 'cc.plugins.whichkey',
     require 'cc.plugins.zenmode',
 }, {

@@ -30,7 +30,7 @@ require('lazy').setup({
     require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
     require 'cc.plugins.lazygit',
-    require 'cc.plugins.lsp', -- ...
+    require 'cc.plugins.lsp', -- kepmays
     require 'cc.plugins.lualine',
     -- require 'cc.plugins.mini', -- go thru keymaps and features
     require 'cc.plugins.neo-tree',

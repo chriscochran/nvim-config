@@ -26,14 +26,10 @@ return {
             'saghen/blink.cmp',
         },
         config = function()
-            -- `:help lsp-vs-treesitter`
-            --  This function gets run when an LSP attaches to a particular buffer.
-
-            -- true toggle
-            -- vim.keymap.set('n', '<leader>mm',
-            --     function()
-            --         vim.cmd [[Mason]]
-            --     end, { desc = 'Toggle [M]ason [M]enu' })
+            -- Mason Menu Toggle
+            vim.keymap.set('n', '<leader>mm', function()
+                vim.cmd [[Mason]]
+            end, { desc = 'Toggle [M]ason [M]enu' })
 
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),

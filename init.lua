@@ -25,16 +25,17 @@ require('lazy').setup({
 
     require 'cc.plugins.alpha',
     require 'cc.plugins.autopairs',
-    require 'cc.plugins.completion',
+    require 'cc.plugins.completion', -- switch to rust fzf
     require 'cc.plugins.format',
     require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
     require 'cc.plugins.lazygit',
+    -- require 'cc.plugins.lint',
     require 'cc.plugins.lsp', -- kepmays
     require 'cc.plugins.lualine',
     -- require 'cc.plugins.mini', -- go thru keymaps and features
     require 'cc.plugins.neo-tree',
-    require 'cc.plugins.noice', -- dont see the displays
+    require 'cc.plugins.noice',
     require 'cc.plugins.telescope',
     require 'cc.plugins.todo',
     require 'cc.plugins.treesitter',

@@ -19,6 +19,7 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+-- auto imports for python and other langs
 require('lazy').setup({
     -- Theme first, always
     { 'f4z3r/gruvbox-material.nvim', name = 'gruvbox-material', lazy = false, priority = 1000, opts = {} },
@@ -26,6 +27,7 @@ require('lazy').setup({
     require 'cc.plugins.alpha',
     require 'cc.plugins.autopairs',
     require 'cc.plugins.completion', -- switch to rust fzf
+    require 'cc.plugins.fileexplorer',
     require 'cc.plugins.format',
     require 'cc.plugins.gitsigns', -- (removed hunk)
     require 'cc.plugins.harpoon', -- delete num?
@@ -34,7 +36,7 @@ require('lazy').setup({
     require 'cc.plugins.lsp', -- kepmays
     require 'cc.plugins.lualine',
     -- require 'cc.plugins.mini', -- go thru keymaps and features
-    require 'cc.plugins.neo-tree',
+    -- require 'cc.plugins.neo-tree', -- bad
     require 'cc.plugins.noice',
     require 'cc.plugins.telescope',
     require 'cc.plugins.todo',
@@ -63,6 +65,30 @@ require('lazy').setup({
             lazy = '💤 ',
         },
     },
+})
+
+vim.lsp.set_log_level 'debug'
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'markdown',
+    callback = function()
+        local client = vim.lsp.start {
+            name = 'python-lsp-chris',
+            cmd = { '/home/chris/Development/nvim/python-lsp/dist/main' },
+            root_dir = '/home/chris/Development/nvim/python-lsp/',
+            on_error = function(code, _)
+                vim.notify(vim.lsp.client_errors[code], vim.log.levels.WARN)
+            end,
+            trace = 'verbose',
+        }
+
+        if not client then
+            vim.notify "Hey, you didn't do the client thing good"
+            return
+        end
+
+        local output = vim.lsp.buf_attach_client(0, client)
+        vim.notify('client attach success: ' .. tostring(output), vim.log.levels.INFO)
+    end,
 })
 
 -- vim: ts=2 sts=2 sw=2 et

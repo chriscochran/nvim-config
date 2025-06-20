@@ -40,13 +40,21 @@ return {
                     end
 
                     map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
+
                     map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
+
                     map('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+
                     map('gri', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+
                     map('grd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+
                     map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+
                     map('gO', require('telescope.builtin').lsp_document_symbols, 'Open Document Symbols')
+
                     map('gW', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Open Workspace Symbols')
+
                     map('grt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype Definition')
 
                     -- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
@@ -138,7 +146,28 @@ return {
 
             -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
             local servers = {
-                pyright = {},
+                -- pyright = {},
+                -- pylsp = {
+                --     settings = {
+                --         pylsp = {
+                --             plugins = {
+                --                 pycodestyle = {
+                --                     maxLineLength = 120,
+                --                     ignore = { 'E501' },
+                --                 },
+                --                 flake8 = {
+                --                     maxLineLength = 120,
+                --                 },
+                --                 yapf = {
+                --                     enabled = false,
+                --                 },
+                --                 autopep8 = {
+                --                     enabled = false,
+                --                 },
+                --             },
+                --         },
+                --     },
+                -- },
                 ts_ls = {},
                 zls = {},
                 yamlls = {},

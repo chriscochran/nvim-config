@@ -68,6 +68,7 @@ require('lazy').setup({
 })
 
 -- connect to custom lsp
-require 'cc.custom.python-lsp-chris'
+-- require 'cc.custom.python-lsp-chris'
+require 'cc.custom.mdlsp'
 
 -- vim: ts=2 sts=2 sw=2 et

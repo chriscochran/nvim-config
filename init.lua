@@ -19,7 +19,6 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
--- auto imports for python and other langs
 require('lazy').setup({
     -- Theme first, always
     { 'f4z3r/gruvbox-material.nvim', name = 'gruvbox-material', lazy = false, priority = 1000, opts = {} },
@@ -30,20 +29,23 @@ require('lazy').setup({
     require 'cc.plugins.fileexplorer',
     require 'cc.plugins.format',
     require 'cc.plugins.gitsigns', -- (removed hunk)
-    require 'cc.plugins.harpoon', -- delete num?
+    -- require 'cc.plugins.harpoon', -- delete num?
     require 'cc.plugins.lazygit',
-    -- require 'cc.plugins.lint',
+    require 'cc.plugins.lint',
     require 'cc.plugins.lsp', -- kepmays
     require 'cc.plugins.lualine',
-    -- require 'cc.plugins.mini', -- go thru keymaps and features
-    -- require 'cc.plugins.neo-tree', -- bad
     require 'cc.plugins.noice',
     require 'cc.plugins.telescope',
     require 'cc.plugins.todo',
     require 'cc.plugins.treesitter',
     require 'cc.plugins.trouble',
     require 'cc.plugins.whichkey',
+    require 'cc.plugins.windsurf',
     require 'cc.plugins.zenmode',
+
+    -- custom
+    -- require 'cc.plugins.dictionary',
+    -- require 'cc.plugins.lexical',
 }, {
 
     ui = {
@@ -67,8 +69,9 @@ require('lazy').setup({
     },
 })
 
--- connect to custom lsp
 -- require 'cc.custom.python-lsp-chris'
-require 'cc.custom.mdlsp'
+-- require 'cc.custom.mdlsp'
+-- require 'cc.custom.dictionary'
+-- require 'cc.custom.lexical'
 
 -- vim: ts=2 sts=2 sw=2 et

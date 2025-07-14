@@ -12,6 +12,9 @@ return {
             lint.linters_by_ft = {
                 lua = { 'luac' },
             }
+            lint.linters_by_ft = {
+                python = { 'flake8' },
+            }
 
             -- To allow other plugins to add linters to require('lint').linters_by_ft,
             -- instead set linters_by_ft like this:

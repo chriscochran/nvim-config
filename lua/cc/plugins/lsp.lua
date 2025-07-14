@@ -146,28 +146,7 @@ return {
 
             -- See `:help lspconfig-all` for a list of all the pre-configured LSPs
             local servers = {
-                -- pyright = {},
-                -- pylsp = {
-                --     settings = {
-                --         pylsp = {
-                --             plugins = {
-                --                 pycodestyle = {
-                --                     maxLineLength = 120,
-                --                     ignore = { 'E501' },
-                --                 },
-                --                 flake8 = {
-                --                     maxLineLength = 120,
-                --                 },
-                --                 yapf = {
-                --                     enabled = false,
-                --                 },
-                --                 autopep8 = {
-                --                     enabled = false,
-                --                 },
-                --             },
-                --         },
-                --     },
-                -- },
+                pyright = {},
                 ts_ls = {},
                 zls = {},
                 yamlls = {},
